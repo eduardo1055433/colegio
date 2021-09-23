@@ -238,16 +238,18 @@ return [
 
         // Sidebar items:
         
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
+        
         [
             'text' => 'Usuarios',
             'route'  => 'admin.users.index',
             'icon' => 'far fa-user fa-file',
-            
+            'can' => 'admin.users.index'
+        ],
+        [
+            'text' => 'Lista de Roles',
+            'route'  => 'admin.roles.index',
+            'icon' => 'fas fa-users-cog fa-fw',
+            //'can' => 'admin.users.index'
         ],
         [
             'text'        => 'Studiantes',
