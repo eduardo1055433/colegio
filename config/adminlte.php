@@ -237,92 +237,48 @@ return [
         ],
 
         // Sidebar items:
-        
-        
+        //MODULO DE USUARIOS AGREGAR
         [
-            'text' => 'Usuarios',
-            'route'  => 'admin.users.index',
-            'icon' => 'far fa-user fa-file',
-            'can' => 'admin.users.index'
+            'text'        => 'USUARIOS',
+            'url'         => 'admin/studentsuser',
+            'icon'        => 'far fa-user fa-file',
+            'label_color' => 'success',
+            'can' => 'admin.studentsuser.index'
         ],
+        //MODULO PERMISOS
+        [
+            'text' => 'Permisos',
+            'route'  => 'admin.users.index',
+            'icon' => 'far fa-address-card',
+             'can' => 'admin.users.index'
+        ],
+        //MODULO DE ROLES
         [
             'text' => 'Lista de Roles',
             'route'  => 'admin.roles.index',
             'icon' => 'fas fa-users-cog fa-fw',
-            //'can' => 'admin.users.index'
+            'can' => 'admin.users.index'
         ],
+        
+         
+        //MODULO DE CURSOS AGREGAR
         [
-            'text'        => 'Studiantes',
-            'url'         => 'admin/students',
-            'icon'        => 'far fa-fw fa-file',
+            'text'        => 'CURSOS',
+            'url'         => 'admin/course',
+            'icon'        => 'fas fa-book',
             'label_color' => 'success',
-            'can' => 'admin.students.index'
+            'can' => 'admin.studentsuser.index'
         ],
-        ['header' => 'account_settings'],
+        //MODULO DE NOTAS AGREGAR
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text'        => 'NOTAS',
+            'url'         => 'admin/notes',
+            'icon'        => 'fas fa-notes-medical',
+            'label_color' => 'success',
+            'can' => 'admin.notes.index'
         ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+
+         
     ],
 
     /*

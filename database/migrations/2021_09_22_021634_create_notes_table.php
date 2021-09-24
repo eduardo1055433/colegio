@@ -16,18 +16,14 @@ class CreateNotesTable extends Migration
         Schema::create('notes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nota');
-            $table->unsignedBigInteger('id_student')->nullable();
+            $table->unsignedBigInteger('id_user')->nullable();
             $table->unsignedBigInteger('id_course')->nullable();
-            $table->unsignedBigInteger('id_teacher')->nullable();
             //LLAVES FORENEAS
-            $table->foreign('id_student')
-                                        ->references('id')->on('students')
+            $table->foreign('id_user')
+                                        ->references('id')->on('users')
                                         ->onDelete('set null');
             $table->foreign('id_course')
                                         ->references('id')->on('courses')
-                                        ->onDelete('set null');
-            $table->foreign('id_teacher')
-                                        ->references('id')->on('teachers')
                                         ->onDelete('set null');
            $table->timestamps();
         });

@@ -16,10 +16,10 @@ class CreateCoursesTable extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->unsignedBigInteger('id_teacher')->nullable();
+            $table->unsignedBigInteger('id_user')->nullable();
             //LLAVES FORENEAS
-            $table->foreign('id_teacher')
-                                         ->references('id')->on('teachers')
+            $table->foreign('id_user')
+                                         ->references('id')->on('users')
                                          ->onDelete('set null');
             $table->timestamps();
         });

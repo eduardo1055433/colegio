@@ -13,10 +13,10 @@
             <div class="card">
                 <div class="card-header">
                     <div class="float-left">
-                        <span class="card-title">Show Student</span>
+                        <span class="card-title">Show User</span>
                     </div>
                     <div class="float-right">
-                        <a class="btn btn-primary" href="{{ route('students.index') }}"> Back</a>
+                        <a class="btn btn-primary" href="{{ route('admin.studentsuser.index') }}"> Back</a>
                     </div>
                 </div>
 
@@ -24,8 +24,17 @@
                     
                     <div class="form-group">
                         <strong>Name:</strong>
-                        {{ $student->name }}
+                        {{ $user->name }}
                     </div>
+                    <div class="form-group">
+                        <strong>Email:</strong>
+                        {{ $user->email }}
+                    </div>
+                    <div class="form-group">
+                        <strong>Password:</strong>
+                        {{ $user->password }}
+                    </div>
+     
 
                 </div>
             </div>
